@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-image: url(background.jpg);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+h2{
+    font-size: 200%;
+    font-weight: 500;
+    color: white;
+}
+
+#dealer-cards img {
+  height: 175px;
+  width: 125px;
+  margin: 1px;
+}
+
+#your-cards img {
+  height: 175px;
+  width: 125px;
+  margin: 1px;
+}
+
+#hit {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#stay {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
