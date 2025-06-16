@@ -105,34 +105,30 @@ function hit() {
   }
 }
 
-function stay(){
-    dealerSum = reduceAce(dealerSum, dealerAceCount);
-    yourSum = reduceAce(yourSum, dealerAceCount);
+function stay() {
+  dealerSum = reduceAce(dealerSum, dealerAceCount);
+  yourSum = reduceAce(yourSum, dealerAceCount);
 
-    canHit = false;
-    document.getElementById("hidden").src = "./cards/" + hidden + ".png";
+  canHit = false;
+  document.getElementById("hidden").src = "./cards/" + hidden + ".png";
 
-    let message = "";
-    if(yourSum > 21){
-        message = "You Lose!";
-    }
-    else if(dealerSum > 21){
-        message = "You Win!";
-    }
-// si tu y el dealer tienen la misma suma empatan
-else if(yourSum == dealerSum){
-    message = "Tie!";
-}
-else if(yourSum > dealerSum){
-    message = "You Win!";
-}
-else if(yourSum < dealerSum){
+  let message = "";
+  if (yourSum > 21) {
     message = "You Lose!";
-}
-document.getElementById("dealer").innerText = dealerSum;
-document.getElementById("your").innerText = yourSum;
-document.getElementById("results").innerText = message;
-
+  } else if (dealerSum > 21) {
+    message = "You Win!";
+  }
+  // si tu y el dealer tienen la misma suma empatan
+  else if (yourSum == dealerSum) {
+    message = "Tie!";
+  } else if (yourSum > dealerSum) {
+    message = "You Win!";
+  } else if (yourSum < dealerSum) {
+    message = "You Lose!";
+  }
+  document.getElementById("dealer").innerText = dealerSum;
+  document.getElementById("your").innerText = yourSum;
+  document.getElementById("results").innerText = message;
 }
 
 function getValue(card) {
