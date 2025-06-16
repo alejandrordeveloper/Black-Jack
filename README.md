@@ -1,14 +1,11 @@
-# Foobar
+# Back-Jack
 
-Foobar is a Python library for dealing with word pluralization.
+A BlackJack game made in HTML, CSS and JAVASCRIPT. In this game the player must beat the dealer to win by getting as close to 21 as possible whitout going over. The user can mek the decisions to stay or ask for more cards.
 
-## Installation
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
-```bash
-pip install foobar
-```
+## Technologies Used
+HTML
+CSS
+JavaScript
 
 ## Usage
 
