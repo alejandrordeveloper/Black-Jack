@@ -1,4 +1,4 @@
-# Back-Jack
+# BlackJack
 
 A BlackJack game made in HTML, CSS and JAVASCRIPT. In this game the player must beat the dealer to win by getting as close to 21 as possible whitout going over. The user can mek the decisions to stay or ask for more cards.
 
