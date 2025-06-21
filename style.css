@@ -1,17 +1,46 @@
 body {
+  height: 100vh;
   text-align: center;
   background-image: url(background.jpg);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: italic;
+  padding: 0;
+  margin: 0;
+}
+/* estilo del titulo */
+h1 {
+  color: white;
+  font-size: 300%;
+  font-weight: 500;
+  margin-top: 10px; /* Espacio arriba del título */
+  
 }
 
-h2{
-    font-size: 200%;
-    font-weight: 500;
-    color: white;
+h2 {
+  color: white;
+  font-size: 200%;
+  font-weight: 500;
+  /* display: flex;
+  flex-direction: row; */
 }
 
+/* estilo en general */
+#dealer-cards {
+  display: flex;
+  flex-direction: row;
+  margin-left: 150px;
+}
+
+#your-cards {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 200px;
+  margin-top: -273px; /* Ajusta este valor para alinear con el dealer */
+  margin-bottom: 20px; /* Espacio entre tus cartas y el dealer */
+}
+
+/* imagenes de las cartas */
 #dealer-cards img {
   height: 175px;
   width: 125px;
@@ -24,6 +53,7 @@ h2{
   margin: 1px;
 }
 
+/* botones */
 #hit {
   width: 100px;
   height: 50px;
@@ -35,9 +65,115 @@ h2{
   width: 100px;
   height: 50px;
   font-size: 20px;
+  cursor: pointer;;
+}
+
+#reset {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
   cursor: pointer;
 }
 
 #results {
   color: white;
+  font-size: 50px;
+  font-weight: 500;
+  margin-top: 10px; /* Espacio arriba del resultado */
+}
+
+#botones-derecha {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-right: 220px;
+}
+
+#boton-reset {
+  display: flex;
+  justify-content: center;
+  margin-top:10px; /* Espacio arriba del botón */
+}
+
+
+/* -------------------- */
+/*      RESPONSIVE      */
+/* -------------------- */
+
+@media (max-width: 1100px) {
+  .jugador-area {
+    margin-left: 40px;
+  }
+  #dealer-cards {
+    margin-left: 40px;
+  }
+  #your-cards {
+    margin-right: 40px;
+  }
+  #botones-derecha {
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.1em;
+  }
+  .jugador-area {
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+  #dealer-cards,
+  #your-cards {
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: center;
+    margin-top: 0;
+  }
+  #dealer-cards img,
+  #your-cards img {
+    height: 200px;
+    width: 90px;
+  }
+  #botones-derecha {
+    margin-right: 0;
+    justify-content: center;
+  }
+  #hit,
+  #stay,
+  #reset {
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+  }
+  #results {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.1em;
+  }
+  h2 {
+    font-size: 1em;
+  }
+  #dealer-cards img,
+  #your-cards img {
+    height: 120px;
+    width: 85px;
+  }
+  #hit,
+  #stay,
+  #reset {
+    width: 70px;
+    height: 40px;
+    font-size: 15px;
+  }
+  #results {
+    font-size: 1em;
+  }
 }

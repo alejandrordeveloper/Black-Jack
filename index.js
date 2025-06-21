@@ -114,17 +114,17 @@ function stay() {
 
   let message = "";
   if (yourSum > 21) {
-    message = "You Lose!";
+    message = "You Lose🥱!";
   } else if (dealerSum > 21) {
-    message = "You Win!";
+    message = "You Win😀!";
   }
   // si tu y el dealer tienen la misma suma empatan
   else if (yourSum == dealerSum) {
-    message = "Tie!";
+    message = "Tie😐!";
   } else if (yourSum > dealerSum) {
-    message = "You Win!";
+    message = "You Win😀!";
   } else if (yourSum < dealerSum) {
-    message = "You Lose!";
+    message = "You Lose🥱!";
   }
   document.getElementById("dealer").innerText = dealerSum;
   document.getElementById("your").innerText = yourSum;
@@ -160,4 +160,36 @@ function reduceAce(playerSum, playerAceCount) {
   }
   return playerSum;
 }
+
+var canHit = true; // permite que el jugador pida cartas
+
+// Función para reiniciar el juego
+function resetGame() {
+    // Reinicia variables
+    dealerSum = 0;
+    yourSum = 0;
+    dealerAceCount = 0;
+    yourAceCount = 0;
+    canHit = true;
+
+    // Reconstruye y baraja el mazo
+    buildDeck();
+    shuffleDeck();
+
+    // Limpia las cartas en pantalla
+    document.getElementById("dealer-cards").innerHTML = '<img id="hidden" src="./cards/BACK.png" />';
+    document.getElementById("your-cards").innerHTML = "";
+
+    // Limpia los textos
+    document.getElementById("dealer").innerText = "";
+    document.getElementById("your").innerText = "";
+    document.getElementById("results").innerText = "";
+
+    // Vuelve a repartir cartas y reinicia el juego
+    startGame();
+}
+
+// Asigna el evento al botón Reset
+document.getElementById("reset").addEventListener("click", resetGame);
+
 
