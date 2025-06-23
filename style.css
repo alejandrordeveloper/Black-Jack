@@ -26,6 +26,13 @@ h2 {
 }
 
 /* estilo en general */
+
+footer {
+  color: white;
+  font-size: 1.2em;
+  margin-top: 20px; /* Espacio arriba del footer */
+}
+
 #dealer-cards {
   display: flex;
   flex-direction: row;
