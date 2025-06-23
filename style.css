@@ -26,6 +26,10 @@ h2 {
 }
 
 /* estilo en general */
+a {
+  text-decoration: none;
+  color: white;
+}
 
 footer {
   color: white;
